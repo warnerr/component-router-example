@@ -1,0 +1,40 @@
+<md-toolbar layout="row">
+    <md-button
+            class="menu"
+            ng-click="null" aria-label="Show User List">
+
+        <md-icon md-svg-icon="menu"></md-icon>
+
+    </md-button>
+    <h3>Angular Material - Starter App</h3>
+</md-toolbar>
+
+<div layout="vertical" layout-fill>
+    <!-- side nav goes here -->
+    <md-sidenav md-is-locked-open="true" class="md-whiteframe-z2 storfirst-sidenav" layout-fill>
+        <md-content flex role="navigation">
+            <md-list flex layout-margin>
+                <md-list-item class="md-1-line" ng-click="null" href="./dashboard">
+                    <i class="fa fa-lg fa-dashboard" layout-margin></i>
+                    <h5>Dashboard</h5>
+                </md-list-item>
+                <md-list-item class="md-1-line" ng-click="null" href="./jobs">
+                    <i class="fa fa-lg fa-briefcase" layout-margin></i>
+                    <h5>Jobs</h5>
+                </md-list-item>
+                <md-list-item class="md-1-line" ng-click="null" href="./devices">
+                    <i class="fa fa-lg fa-server" layout-margin></i>
+                    <h5>Devices</h5>
+                </md-list-item>
+                <md-list-item class="md-1-line" ng-click="null" href="./security">
+                    <i class="fa fa-lg fa-cogs" layout-margin></i>
+                    <h5>Settings</h5>
+                </md-list-item>
+
+        </md-content>
+    </md-sidenav>
+    <md-content flex id="content" layout="column">
+        <!-- content goes here -->
+        <ng-outlet></ng-outlet>
+    </md-content>
+</div>
